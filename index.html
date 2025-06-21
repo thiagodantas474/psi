@@ -6,10 +6,7 @@
     <title>Psicólogo Thiago Dantas | Bem-Estar Emocional</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Importando a fonte Codec Pro para o cabeçalho -->
     <link href="https://fonts.cdnfonts.com/css/codec-pro" rel="stylesheet">
-    
     <style>
         :root {
             --azul-escuro: #1c2464;
@@ -40,11 +37,11 @@
             font-weight: 700;
         }
         
-        /* Cabeçalho com fonte Codec Pro */
+        /* Cabeçalho com fonte Codec Pro - MENOS ESPAÇO */
         header {
             background-color: var(--azul-escuro);
             color: white;
-            padding: 1.5rem 0;
+            padding: 0.8rem 0; /* Reduzido o espaçamento vertical */
             position: sticky;
             top: 0;
             z-index: 100;
@@ -71,7 +68,7 @@
         }
         
         nav li {
-            margin: 0 1.8rem;
+            margin: 0 1.2rem; /* Espaçamento reduzido entre itens */
         }
         
         /* Aplicando a fonte Codec Pro para os itens de navegação */
@@ -79,10 +76,10 @@
             color: white;
             text-decoration: none;
             font-weight: 600;
-            padding: 0.5rem 0;
+            padding: 0.3rem 0; /* Reduzido o padding vertical */
             position: relative;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
+            font-size: 1rem; /* Tamanho de fonte ligeiramente menor */
             font-family: 'Codec Pro', sans-serif;
             letter-spacing: 0.5px;
         }
@@ -93,7 +90,7 @@
             bottom: 0;
             left: 0;
             width: 0;
-            height: 3px;
+            height: 2px; /* Linha mais fina */
             background-color: var(--branco);
             transition: width 0.3s ease;
         }
@@ -102,14 +99,13 @@
             width: 100%;
         }
         
-        /* Hero Section - Logo acima da imagem grande */
+        /* Hero Section com logo acima da imagem grande - MAIS ALTO */
         .hero {
             background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-claro) 100%);
             color: white;
-            padding: 2rem 0 3rem;
+            padding: 1.5rem 0 2rem; /* Reduzido o padding vertical */
             position: relative;
             overflow: hidden;
-            text-align: center;
         }
         
         .hero::before {
@@ -122,66 +118,80 @@
             background: radial-gradient(circle at top right, rgba(255,255,255,0.1) 0%, transparent 20%);
         }
         
+        .hero-content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
         .hero-logo {
-            margin-bottom: 2rem;
             text-align: center;
+            margin-bottom: 1rem; /* Margem reduzida */
+            z-index: 2;
         }
         
         .hero-logo img {
-            height: 180px;
+            height: 150px; /* Logo menor */
             width: auto;
-            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .hero-logo img:hover {
+            transform: scale(1.05);
         }
         
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 2rem; /* Espaço reduzido entre colunas */
             align-items: center;
             position: relative;
             z-index: 2;
+            width: 100%;
         }
         
         .hero-content {
             max-width: 900px;
             padding: 0 20px;
-            text-align: left;
         }
         
         .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem; /* Título menor */
+            margin-bottom: 1rem; /* Margem reduzida */
             line-height: 1.2;
             text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.1rem; /* Texto menor */
+            margin-bottom: 1.5rem; /* Margem reduzida */
             max-width: 700px;
             font-weight: 400;
         }
         
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
-            margin-top: 2rem;
+            gap: 1rem; /* Espaço reduzido entre botões */
+            margin-top: 1.5rem; /* Margem reduzida */
         }
         
         .hero-image {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Alinhado ao topo */
             height: 100%;
+            position: relative;
         }
         
         .hero-image img {
             width: 100%;
-            max-width: 400px;
+            max-width: 380px; /* Imagem ligeiramente menor */
             height: auto;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            border: 5px solid rgba(255,255,255,0.3);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3); /* Sombra mais suave */
+            border: 4px solid rgba(255,255,255,0.3); /* Borda mais fina */
             transition: transform 0.3s ease;
         }
         
@@ -191,8 +201,8 @@
         
         .hero-info {
             display: flex;
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 1.5rem; /* Espaço reduzido entre itens */
+            margin-top: 2rem; /* Margem reduzida */
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -200,24 +210,25 @@
         .info-item {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px; /* Espaço reduzido entre ícone e texto */
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
-            padding: 12px 25px;
+            padding: 10px 20px; /* Padding reduzido */
             border-radius: 50px;
             font-weight: 600;
+            font-size: 0.95rem; /* Texto menor */
         }
         
         .btn {
             display: inline-block;
-            padding: 15px 35px;
+            padding: 12px 30px; /* Botões mais compactos */
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: all 0.3s ease;
             text-align: center;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 1rem; /* Fonte menor */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombra mais suave */
         }
         
         .btn-primary {
@@ -227,7 +238,7 @@
         
         .btn-primary:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5); /* Sombra mais suave */
         }
         
         .btn-secondary {
@@ -241,9 +252,9 @@
             color: var(--azul-escuro);
         }
         
-        /* Seções alternadas */
+        /* Seções alternadas - MENOS ESPAÇO */
         .section {
-            padding: 6rem 0;
+            padding: 4rem 0; /* Reduzido o espaçamento vertical */
         }
         
         .section-dark {
@@ -258,28 +269,28 @@
         
         .section-title {
             text-align: center;
-            margin-bottom: 1.5rem;
-            font-size: 2.5rem;
+            margin-bottom: 1.2rem; /* Margem reduzida */
+            font-size: 2.2rem; /* Título menor */
             position: relative;
         }
         
         .section-title::after {
             content: '';
             display: block;
-            width: 80px;
+            width: 70px; /* Linha mais curta */
             height: 4px;
             background: var(--destaque);
-            margin: 15px auto;
+            margin: 12px auto; /* Margem reduzida */
             border-radius: 2px;
         }
         
         .section-subtitle {
             text-align: center;
-            margin-bottom: 3.5rem;
+            margin-bottom: 2.5rem; /* Margem reduzida */
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            font-size: 1.25rem;
+            font-size: 1.15rem; /* Texto menor */
             color: var(--cinza-escuro);
         }
         
@@ -290,16 +301,16 @@
         /* Suas Dores (Termos suavizados) */
         .dores-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards mais estreitos */
+            gap: 2rem; /* Espaço reduzido */
+            margin-top: 1.5rem; /* Margem reduzida */
         }
         
         .dor-card {
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra mais suave */
             transition: all 0.4s ease;
             display: flex;
             flex-direction: column;
@@ -312,31 +323,31 @@
         }
         
         .dor-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            transform: translateY(-10px); /* Elevação reduzida */
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12); /* Sombra mais suave */
         }
         
         .dor-icon {
             background: var(--azul-claro);
-            height: 100px;
+            height: 90px; /* Altura reduzida */
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2.8rem;
+            font-size: 2.5rem; /* Ícone menor */
         }
         
         .dor-content {
-            padding: 2rem;
+            padding: 1.5rem; /* Espaço interno reduzido */
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
         
         .dor-content h3 {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem; /* Margem reduzida */
             color: var(--azul-escuro);
-            font-size: 1.6rem;
+            font-size: 1.5rem; /* Título menor */
         }
         
         .section-dark .dor-content h3 {
@@ -344,9 +355,9 @@
         }
         
         .dor-content p {
-            margin-bottom: 1.8rem;
-            font-size: 1.1rem;
-            line-height: 1.7;
+            margin-bottom: 1.5rem; /* Margem reduzida */
+            font-size: 1rem; /* Texto menor */
+            line-height: 1.6;
             flex-grow: 1;
         }
         
@@ -360,19 +371,19 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 2.5rem;
-            margin-top: 1rem;
+            gap: 2rem; /* Espaço reduzido */
+            margin-top: 0.5rem; /* Margem reduzida */
         }
         
         .processo-item {
             flex: 1;
-            min-width: 280px;
-            max-width: 360px;
+            min-width: 260px; /* Largura mínima menor */
+            max-width: 340px; /* Largura máxima menor */
             text-align: center;
-            padding: 2.5rem 2rem;
+            padding: 2rem 1.5rem; /* Espaço interno reduzido */
             border-radius: 15px;
             background: white;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06); /* Sombra mais suave */
             transition: all 0.3s ease;
         }
         
@@ -381,22 +392,22 @@
         }
         
         .processo-item:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px); /* Elevação reduzida */
         }
         
         .processo-numero {
-            width: 70px;
-            height: 70px;
+            width: 60px; /* Tamanho menor */
+            height: 60px; /* Tamanho menor */
             background: var(--azul-escuro);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.8rem; /* Fonte menor */
             font-weight: 700;
-            margin: 0 auto 1.8rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 0 auto 1.5rem; /* Margem reduzida */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra mais suave */
         }
         
         .section-dark .processo-numero {
@@ -405,9 +416,9 @@
         }
         
         .processo-item h3 {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem; /* Margem reduzida */
             color: var(--azul-escuro);
-            font-size: 1.5rem;
+            font-size: 1.4rem; /* Título menor */
         }
         
         .section-dark .processo-item h3 {
@@ -415,23 +426,23 @@
         }
         
         .processo-item p {
-            font-size: 1.1rem;
-            line-height: 1.7;
+            font-size: 1rem; /* Texto menor */
+            line-height: 1.6;
         }
         
         /* Depoimentos */
         .depoimentos-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards mais estreitos */
+            gap: 2rem; /* Espaço reduzido */
+            margin-top: 1.5rem; /* Margem reduzida */
         }
         
         .depoimento-card {
             background: white;
             border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            padding: 2rem; /* Espaço interno reduzido */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06); /* Sombra mais suave */
             position: relative;
             transition: all 0.3s ease;
         }
@@ -442,15 +453,15 @@
         }
         
         .depoimento-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px); /* Elevação reduzida */
         }
         
         .depoimento-card::before {
             content: '"';
             position: absolute;
-            top: 20px;
-            left: 25px;
-            font-size: 6rem;
+            top: 15px; /* Posição ajustada */
+            left: 20px; /* Posição ajustada */
+            font-size: 5rem; /* Tamanho menor */
             color: rgba(28, 36, 100, 0.08);
             font-family: serif;
             line-height: 1;
@@ -459,17 +470,17 @@
         
         .depoimento-texto {
             font-style: italic;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem; /* Margem reduzida */
             position: relative;
             z-index: 2;
-            font-size: 1.1rem;
-            line-height: 1.7;
+            font-size: 1rem; /* Texto menor */
+            line-height: 1.6;
         }
         
         .depoimento-autor {
             font-weight: 700;
             color: var(--azul-escuro);
-            font-size: 1.1rem;
+            font-size: 1rem; /* Texto menor */
             position: relative;
             z-index: 2;
         }
@@ -481,35 +492,35 @@
         /* Contato */
         .contato-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas mais estreitas */
+            gap: 2.5rem; /* Espaço reduzido */
+            margin-top: 1.5rem; /* Margem reduzida */
         }
         
         .contato-info {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1.8rem; /* Espaço reduzido */
         }
         
         .contato-item {
             display: flex;
             align-items: flex-start;
-            gap: 1.5rem;
+            gap: 1.2rem; /* Espaço reduzido */
         }
         
         .contato-icon {
-            width: 60px;
-            height: 60px;
+            width: 55px; /* Tamanho menor */
+            height: 55px; /* Tamanho menor */
             background: var(--azul-escuro);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.6rem;
+            font-size: 1.5rem; /* Ícone menor */
             flex-shrink: 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra mais suave */
         }
         
         .section-dark .contato-icon {
@@ -518,9 +529,9 @@
         }
         
         .contato-text h3 {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem; /* Margem reduzida */
             color: var(--azul-escuro);
-            font-size: 1.3rem;
+            font-size: 1.2rem; /* Título menor */
         }
         
         .section-dark .contato-text h3 {
@@ -528,7 +539,7 @@
         }
         
         .contato-text p {
-            font-size: 1.1rem;
+            font-size: 1rem; /* Texto menor */
             line-height: 1.6;
         }
         
@@ -554,9 +565,9 @@
         
         .contato-form {
             background: white;
-            padding: 2.5rem;
+            padding: 2rem; /* Espaço interno reduzido */
             border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra mais suave */
         }
         
         .section-dark .contato-form {
@@ -566,8 +577,8 @@
         
         .contato-form h3 {
             color: var(--azul-escuro);
-            margin-bottom: 1.8rem;
-            font-size: 1.8rem;
+            margin-bottom: 1.5rem; /* Margem reduzida */
+            font-size: 1.6rem; /* Título menor */
             text-align: center;
         }
         
@@ -576,12 +587,12 @@
         }
         
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem; /* Margem reduzida */
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem; /* Margem reduzida */
             font-weight: 600;
             color: var(--cinza-escuro);
         }
@@ -593,11 +604,11 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 14px 18px;
+            padding: 12px 16px; /* Padding reduzido */
             border: 1px solid #ddd;
             border-radius: 8px;
             font-family: inherit;
-            font-size: 1.1rem;
+            font-size: 1rem; /* Texto menor */
             transition: all 0.3s ease;
             background: rgba(255,255,255,0.9);
         }
@@ -622,35 +633,35 @@
             border: none;
             cursor: pointer;
             width: 100%;
-            padding: 16px;
+            padding: 14px; /* Padding reduzido */
             font-weight: 700;
             border-radius: 8px;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
+            font-size: 1rem; /* Texto menor */
+            margin-top: 0.3rem; /* Margem reduzida */
         }
         
         .btn-form:hover {
             background: var(--azul-claro);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra mais suave */
         }
         
         /* Botão flutuante do WhatsApp */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 70px;
-            height: 70px;
+            bottom: 25px; /* Posição mais baixa */
+            right: 25px; /* Posição mais próxima da borda */
+            width: 60px; /* Tamanho menor */
+            height: 60px; /* Tamanho menor */
             background-color: var(--verde-whatsapp);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.2rem;
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+            font-size: 1.8rem; /* Ícone menor */
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); /* Sombra mais suave */
             z-index: 100;
             animation: pulse 2s infinite;
             text-decoration: none;
@@ -665,11 +676,11 @@
         @keyframes pulse {
             0% {
                 transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
             }
             70% {
                 transform: scale(1.08);
-                box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
             }
             100% {
                 transform: scale(1);
@@ -679,11 +690,11 @@
         
         /* Espaço para vídeo do Google Drive - Solução definitiva */
         .drive-container {
-            margin: 4rem auto;
+            margin: 3rem auto; /* Margem reduzida */
             max-width: 800px;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Sombra mais suave */
             position: relative;
             cursor: pointer;
             background: #000;
@@ -731,8 +742,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
+            width: 70px; /* Tamanho menor */
+            height: 70px; /* Tamanho menor */
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 50%;
             display: flex;
@@ -744,7 +755,7 @@
         
         .drive-play-button i {
             color: var(--azul-escuro);
-            font-size: 2.5rem;
+            font-size: 2.2rem; /* Ícone menor */
             margin-left: 5px;
         }
         
@@ -757,7 +768,7 @@
         footer {
             background: var(--azul-escuro);
             color: white;
-            padding: 3rem 0 2rem;
+            padding: 2.5rem 0 1.5rem; /* Espaço reduzido */
             text-align: center;
         }
         
@@ -765,7 +776,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2rem;
+            gap: 1.8rem; /* Espaço reduzido */
         }
         
         .footer-logo {
@@ -776,40 +787,40 @@
         }
         
         .footer-logo img {
-            height: 180px;
+            height: 150px; /* Logo menor */
             width: auto;
         }
         
         .social-icons {
             display: flex;
-            gap: 1.8rem;
-            margin: 1.5rem 0;
+            gap: 1.5rem; /* Espaço reduzido */
+            margin: 1.2rem 0; /* Margem reduzida */
         }
         
         .social-icons a {
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.6rem; /* Ícones menores */
             transition: transform 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 55px;
-            height: 55px;
+            width: 50px; /* Tamanho menor */
+            height: 50px; /* Tamanho menor */
             border-radius: 50%;
             background: rgba(255,255,255,0.1);
         }
         
         .social-icons a:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px); /* Elevação reduzida */
             background: rgba(255,255,255,0.2);
         }
         
         .footer-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.8rem; /* Espaço reduzido */
             flex-wrap: wrap;
             justify-content: center;
-            margin: 1.5rem 0;
+            margin: 1.2rem 0; /* Margem reduzida */
         }
         
         .footer-links a {
@@ -817,6 +828,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: 600;
+            font-size: 0.95rem; /* Texto menor */
         }
         
         .footer-links a:hover {
@@ -824,9 +836,9 @@
         }
         
         .copyright {
-            margin-top: 2rem;
+            margin-top: 1.5rem; /* Margem reduzida */
             color: rgba(255,255,255,0.7);
-            font-size: 1rem;
+            font-size: 0.95rem; /* Texto menor */
         }
         
         /* Responsividade */
@@ -836,11 +848,11 @@
             }
             
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2.2rem;
             }
             
             .section-title {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             
             .hero-content {
@@ -849,7 +861,7 @@
             
             .hero-image {
                 order: 2;
-                margin-top: 2rem;
+                margin-top: 1.5rem;
             }
             
             .hero-buttons {
@@ -857,90 +869,85 @@
             }
             
             .hero-logo img {
-                height: 140px;
+                height: 130px;
             }
             
             .footer-logo img {
-                height: 140px;
+                height: 130px;
             }
         }
         
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1.2rem;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-            
             nav li {
-                margin: 0 1rem;
+                margin: 0 0.8rem;
             }
             
             .hero {
-                padding: 3rem 0 2rem;
+                padding: 1.2rem 0;
             }
             
             .hero h1 {
-                font-size: 2.3rem;
+                font-size: 2rem;
             }
             
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
-                gap: 1rem;
+                gap: 0.8rem;
             }
             
             .btn {
                 width: 100%;
-                max-width: 300px;
+                max-width: 280px;
+                padding: 10px 25px;
             }
             
             .section {
-                padding: 4rem 0;
+                padding: 3rem 0;
             }
             
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .section-subtitle {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             .hero-logo img {
-                height: 120px;
+                height: 110px;
             }
             
             .footer-logo img {
-                height: 120px;
+                height: 110px;
             }
         }
         
         @media (max-width: 480px) {
             nav li {
-                margin: 0 0.8rem;
+                margin: 0 0.4rem;
+            }
+            
+            nav a {
+                font-size: 0.9rem;
             }
             
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .hero-info {
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
             }
             
             .section-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             
             .hero-logo img {
@@ -952,12 +959,17 @@
             }
             
             .drive-play-button {
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
             }
             
             .drive-play-button i {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+            
+            .info-item {
+                padding: 8px 16px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -978,11 +990,12 @@
         </div>
     </header>
 
-    <!-- Hero Section com logo acima da imagem -->
+    <!-- Hero Section com logo acima da imagem grande -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="hero-content-container">
+            <!-- Logo acima da imagem grande -->
             <div class="hero-logo">
-                <img src="Logo-perto-com-CRP.png" alt="Logo Psicólogo Thiago Dantas" class="logo-img">
+                <img src="Logo-perto-com-CRP.png" alt="Logo Psicólogo Thiago Dantas">
             </div>
             
             <div class="hero-grid">
@@ -1104,7 +1117,7 @@
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 4rem;">
+            <div style="text-align: center; margin-top: 3rem;">
                 <a href="https://api.whatsapp.com/send/?phone=5579996037276&text=Ol%C3%A1%2C+quero+marcar+minha+primeira+consulta&type=phone_number&app_absent=0" class="btn btn-primary">Agendar primeira consulta</a>
             </div>
         </div>
@@ -1149,7 +1162,7 @@
                         </div>
                         <div class="contato-text">
                             <h3>Endereço</h3>
-                            <p>Oásis Consultório | Av. Hélio de Souza Leão, 383 - Sala 1105 - Jardins, Aracaju - SE, 49015-160</p>
+                            <p>Horizonte Jardins Offices - Jardins, Aracaju - SE, 49020-550</p>
                         </div>
                     </div>
                     
@@ -1224,7 +1237,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="Logo-perto-com-CRP.png" alt="Logo Psicólogo Thiago Dantas" class="logo-img">
+                    <img src="Logo-perto-com-CRP.png" alt="Logo Psicólogo Thiago Dantas">
                 </div>
                 
                 <div class="footer-links">
@@ -1243,7 +1256,7 @@
                 </div>
                 
                 <div class="copyright">
-                    © 2023 Psicólogo Thiago Dantas. Todos os direitos reservados. CRP: 19/004658
+                    © 2023 Psicólogo Thiago Dantas. Todos os direitos reservados. CRP: XX/XXXXX
                 </div>
             </div>
         </div>
@@ -1275,8 +1288,8 @@
             
             elementos.forEach(el => {
                 el.style.opacity = "0";
-                el.style.transform = "translateY(30px)";
-                el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+                el.style.transform = "translateY(20px)"; /* Animação mais sutil */
+                el.style.transition = "opacity 0.5s ease, transform 0.5s ease"; /* Duração reduzida */
                 observer.observe(el);
             });
         });
